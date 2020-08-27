@@ -1,18 +1,20 @@
 <div id="content-container">
     <div id="section-navigation">
         <ul class="navi">
-<!--            <li><a href="#">Home</a>-->
-<!--                <ul class="pages">-->
-<!--                    <li><a href="#">Home</a></li>-->
-<!--                    <li><a href="#">About</a></li>-->
-<!--                    <li><a href="#">Clients</a></li>-->
-<!--                    <li><a href="#">Contact Us</a></li>-->
-<!--                </ul>-->
-<!--            </li>-->
-            <?php $data=\baitap\Model\CategoriesModel::selectallCategory();
-            foreach ($data as $key=>$values):
-            ?>
-            <li><a href=""><?=$values[0]?></a></li>
+            <?php use baitap\Model\CategoriesModel;
+
+            $data = CategoriesModel::selectallCategory();
+            foreach ($data as $key => $values):
+                ?>
+                <li><a href=""><?= $values[0] ?></a>
+                    <?php
+                    $x = CategoriesModel::queryMenuPages($values[1]);
+                    if ($x[0] > 0) {
+                        foreach ($x[1] as $item => $name) {
+                            echo "<ul class='pages'><li><a href=''>" . $name[0] . "</a></li></ul>";
+                        }
+                    } ?>
+                </li>
             <?php endforeach; ?>
         </ul>
     </div><!--end section-navigation-->

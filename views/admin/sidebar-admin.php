@@ -10,8 +10,14 @@
             </li>
             <li><a href="<?php echo URL::uri('list_pages') ?>">Pages</a>
                 <ul class="pages">
-                    <li><a href="<?php echo URL::uri('list_Pages') ?>">list Pages</a></li>
-                    <li><a href="<?php echo URL::uri('add_Pages') ?>">add Pages</a></li>
+                    <li><a href="<?php echo URL::uri('list_pages') ?>">list Pages</a></li>
+                    <li><a href="<?php echo URL::uri('add_pages') ?>">add Pages</a></li>
+                </ul>
+            </li>
+            <li><a href="<?php echo URL::uri('list_user') ?>">Manage User</a>
+                <ul class="pages">
+                    <li><a href="<?php echo URL::uri('list_user') ?>">list User</a></li>
+                    <li><a href="<?php echo URL::uri('add_user') ?>">add User</a></li>
                 </ul>
             </li>
         </ul>

@@ -10,17 +10,12 @@ require_once 'views/admin/sidebar-admin.php';
 ?>
     <div id="content">
         <h2>Create a page</h2>
-        <?php if (!empty($messages)) echo $messages; ?>
+        <div style="color: red"><?php if (isset($_SESSION['check_required'])) echo $_SESSION['check_required']; ?></div>
         <form id="add_page" action="<?php echo URL::uri('add_pages') ?>" method="post">
             <fieldset>
                 <legend>Add a Page</legend>
                 <div>
                     <label for="page">Page Name: <span class="required">*</span>
-                        <!--                        --><?php
-                        //                        if(isset($errors) && in_array('page_name', $errors)) {
-                        //                            echo "<p class='warning'>Please fill in the page name</p>";
-                        //                        }
-                        //                        ?>
                     </label>
                     <input type="text" name="page_name" id="page_name"
                            value="<?php if (isset($_POST['page_name'])) echo strip_tags($_POST['page_name']); ?>"
@@ -31,7 +26,7 @@ require_once 'views/admin/sidebar-admin.php';
                     <label for="category">All categories: <span class="required">*</span>
                     </label>
 
-                    <select name="category">
+                    <select name="cat_id">
                         <?php
                         $db = CategoriesModel::SelectCategory();
                         foreach ($db as $item => $value) {
@@ -65,7 +60,7 @@ require_once 'views/admin/sidebar-admin.php';
                               rows="20"><?php if (isset($_POST['content'])) echo htmlentities($_POST['content'], ENT_COMPAT, 'UTF-8'); ?></textarea>)
                 </div>
             </fieldset>
-            <p><input type="submit" name="submit" value="Add Page"/></p>
+            <p><input type="submit" value="Add Page"/></p>
         </form>
 
     </div><!--end content-->

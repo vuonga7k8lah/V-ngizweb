@@ -8,6 +8,8 @@ require_once 'views/navigation.php';
 require_once 'views/admin/sidebar-admin.php';
 ?>
     <div id="content">
+        <div style="color: #3399ff"><?php if (isset($_SESSION['success_update'])){ echo $_SESSION['success_update'];} ?></div>
+        <div style="color: #3399ff"><?php if (isset($_SESSION['success_delete'])){ echo $_SESSION['success_delete'];} ?></div>
         <h2>Manage Categories</h2>
         <table>
             <thead>

@@ -25,9 +25,15 @@ class CategoriesController
             Session::set('error_unique_category', 'Hãy Nhập Đủ Thông Tin Vào Bảng');
             Redirect::uri('add_categories');
         } else {
-            $insert = CategoriesModel::insertCategories($data);
-            Session::set('success', 'Thêm Thành Công');
-            Redirect::uri('list_category');
+            if (CategoriesModel::isNameCategoryExist($data['category'])>0){
+                Session::set('error_Exist_category1', 'Tên Category đã tồn tại');
+                Redirect::uri('add_categories');
+            }
+            else{
+                $insert = CategoriesModel::insertCategories($data);
+                Session::set('success', 'Thêm Thành Công');
+                Redirect::uri('list_categories');
+            }
         }
     }
 
@@ -38,20 +44,26 @@ class CategoriesController
 
     public function editCategoriesView()
     {
-        require_once 'views/admin/Categories/listViewCategories.php';
+        require_once 'views/admin/Categories/editViewCategories.php';
 
     }
 
     public function editCategories()
     {
-        var_dump($_POST);
-        die();
+        $data=$_POST;
+        if (CategoriesModel::updateCategory($data)){
+            Session::set('success_update', 'Update Thành Công');
+            Redirect::uri('list_categories');
+        }
     }
 
     public function deleteCategories()
     {
-        var_dump(Request::uri()[1]);
-        die();
+        $id = Request::uri()[1];
+        if (CategoriesModel::deleteCategory($id)) {
+            Session::set('success_delete', 'Xóa Thành Công');
+            Redirect::uri('list_categories');
+        }
     }
 
     public function orderCategories()
@@ -70,7 +82,7 @@ class CategoriesController
                 $order_by = 'name';
                 break;
         } // End Switch
-        Session::set('order_by',$order_by);
+        Session::set('order_by', $order_by);
         Redirect::uri('list_categories');
     }
 

@@ -15,9 +15,23 @@ $oRoute->get('edit_categories', 'baitap\Controller\CategoriesController@editCate
 $oRoute->get('delete_categories', 'baitap\Controller\CategoriesController@deleteCategories');
 $oRoute->post('add_categories', 'baitap\Controller\CategoriesController@addCategories');
 $oRoute->post('edit_categories', 'baitap\Controller\CategoriesController@editCategories');
+//logout
+$oRoute->get('logout', 'baitap\Controller\LogoutController@adminLogout');
 //Sap xep theo thu tu cua table head
 $oRoute->get('order_categories', 'baitap\Controller\CategoriesController@orderCategories');
+$oRoute->get('order_pages', 'baitap\Controller\PageController@orderPages');
 
 //pages
-$oRoute->get('add_pages', 'baitap\Controller\PageController@loadView');
+$oRoute->get('add_pages', 'baitap\Controller\PageController@addViewPages');
+$oRoute->get('list_pages', 'baitap\Controller\PageController@listViewPages');
+$oRoute->get('edit_pages', 'baitap\Controller\PageController@editViewPages');
+$oRoute->get('delete_pages', 'baitap\Controller\PageController@deletePages');
 $oRoute->post('add_pages', 'baitap\Controller\PageController@addPages');
+$oRoute->post('edit_pages', 'baitap\Controller\PageController@editPages');
+//users
+$oRoute->get('add_user', 'baitap\Controller\UserController@addViewUser');
+$oRoute->get('list_user', 'baitap\Controller\UserController@listViewUser');
+$oRoute->get('edit_user', 'baitap\Controller\UserController@editViewUser');
+$oRoute->get('delete_user', 'baitap\Controller\UserController@deleteUser');
+$oRoute->post('add_user', 'baitap\Controller\UserController@addUser');
+$oRoute->post('edit_user', 'baitap\Controller\UserController@editUser');
