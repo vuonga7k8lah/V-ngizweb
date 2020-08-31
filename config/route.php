@@ -6,6 +6,9 @@
 $oRoute->get('404', 'baitap\Controller\PageNotFound@loadView');
 //home-izcms
 $oRoute->get('home', 'baitap\Controller\HomeController@loadView');
+$oRoute->get('cid', 'baitap\Controller\HomeController@cidView');
+$oRoute->get('paid', 'baitap\Controller\HomeController@paidView');
+
 //admin-izcms
 $oRoute->get('admin', 'baitap\Controller\AdminController@loadView');
 //categories

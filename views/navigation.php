@@ -1,6 +1,6 @@
 <div id="navigation">
     <ul>
-        <li><a href='#'>Home</a></li>
+        <li><a href='<?=\baitap\core\URL::uri('home')?>'>Home</a></li>
         <li><a href='#'>About</a></li>
         <li><a href='#'>Services</a></li>
         <li><a href='<?php echo \baitap\core\URL::uri('logout')?>'>Contact us</a></li>

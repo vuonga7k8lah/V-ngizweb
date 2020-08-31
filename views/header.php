@@ -4,7 +4,7 @@
 <head>
     <base href="<?= \baitap\core\URL::uri()?>">
     <meta charset='UTF-8' />
-    <title>VuongSimple</title>
+    <title><?php echo isset($title)?$title:"Vương_Simple"?></title>
     <link rel='stylesheet' href='./assets/css/style.css' />
 
 </head>

@@ -36,7 +36,7 @@ class CategoriesModel
 
     public static function queryMenuPages($id)
     {
-        $db = DB::makeConnection()->query("SELECT p.page_name FROM pages p JOIN categories c ON c.cat_id= p.cat_id WHERE c.cat_id=" . $id . "");
+        $db = DB::makeConnection()->query("SELECT p.page_name,p.page_id FROM pages p JOIN categories c ON c.cat_id= p.cat_id WHERE c.cat_id=" . $id . "");
         return [$db->num_rows, $db->fetch_all()];
     }
 

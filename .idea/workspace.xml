@@ -2,26 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ed760bb-99ba-429c-bc7f-e3e6575e00c2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/izcms.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/LogoutController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/UserController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/PagesModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/UserModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/admin/Categories/editViewCategories.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/admin/ManageUsers/addViewUsers.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/admin/ManageUsers/editViewUsers.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/admin/ManageUsers/listViewUsers.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/admin/Pages/editViewPages.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/admin/Pages/listViewPages.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/function/function.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/HomeModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/icms/cid.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/icms/paid.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/route.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/route.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/CategoriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CategoriesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/PageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/CategoriesModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/CategoriesModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/admin/Categories/View_add_categories.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin/Categories/View_add_categories.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/admin/Categories/listViewCategories.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin/Categories/listViewCategories.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/admin/View_add_pages.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin/Pages/View_add_pages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/admin/sidebar-admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin/sidebar-admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/Bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/Bootstrap.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/navigation.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/navigation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/section-navigation.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/section-navigation.php" afterDir="false" />
@@ -58,7 +48,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../VuongNoStupid" />
+    <property name="last_opened_file_path" value="D:/icms" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -92,6 +82,10 @@
       <workItem from="1598372968065" duration="99000" />
       <workItem from="1598408898482" duration="8631000" />
       <workItem from="1598479672002" duration="20925000" />
+      <workItem from="1598630018345" duration="612000" />
+      <workItem from="1598789265488" duration="2677000" />
+      <workItem from="1598836118417" duration="8251000" />
+      <workItem from="1598859328981" duration="3753000" />
     </task>
     <servers />
   </component>
@@ -99,6 +93,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="137" y="21" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598839608120">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="137" y="21" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728/1366.0.1366.768@0.0.1366.728" timestamp="1598839608120" />
     <state x="453" y="173" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598411848904">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -107,30 +105,35 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="488" y="49" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1598483838787" />
-    <state x="413" y="113" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598255892177">
+    <state x="413" y="113" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598842051196">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="413" y="113" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728/1366.0.1366.768@0.0.1366.728" timestamp="1598842051196" />
     <state x="413" y="113" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1598255892177" />
     <state x="413" y="121" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1598482371885">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="121" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1598482371885" />
-    <state x="463" y="121" key="FileChooserDialogImpl" timestamp="1598481638527">
+    <state x="463" y="121" key="FileChooserDialogImpl" timestamp="1598840437282">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="121" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1598481638527" />
-    <state x="543" y="202" key="NewPhpClassDialog" timestamp="1598523204793">
+    <state x="463" y="121" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1366.768@0.0.1366.728" timestamp="1598840437282" />
+    <state x="463" y="121" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1598630810922" />
+    <state x="543" y="202" key="NewPhpClassDialog" timestamp="1598836784396">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="543" y="202" key="NewPhpClassDialog/0.0.1366.728/1366.0.1366.768@0.0.1366.728" timestamp="1598836784396" />
     <state x="543" y="202" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1598523204793" />
-    <state x="518" y="294" key="NewPhpFileDialog" timestamp="1598522284759">
+    <state x="518" y="294" key="NewPhpFileDialog" timestamp="1598842916926">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="518" y="294" key="NewPhpFileDialog/0.0.1366.728/1366.0.1366.768@0.0.1366.728" timestamp="1598842916926" />
     <state x="518" y="294" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1598522284759" />
-    <state x="0" y="0" key="com.intellij.ide.util.TipDialog" timestamp="1598479672973">
+    <state x="0" y="0" key="com.intellij.ide.util.TipDialog" timestamp="1598836118511">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="0" y="0" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1598479672973" />
+    <state x="0" y="0" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.0.1366.768@0.0.1366.728" timestamp="1598836118511" />
+    <state x="0" y="0" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1598630018891" />
     <state x="339" y="157" key="run.anything.popup" timestamp="1598523801524">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
