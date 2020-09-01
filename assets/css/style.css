@@ -1,6 +1,9 @@
 /***** MAIN SETTINGS *******/
 
 * {margin: 0; padding: 0}
+body{
+    font-family: 'Montserrat', sans-serif;
+}
 p, label, a {color: #333333; line-height: 1.5; font-size: 13px; font-family:'lucida grande',tahoma,verdana,arial,sans-serif； }
 ul{list-style: none;}
 a {color: #035389; text-decoration: none;}

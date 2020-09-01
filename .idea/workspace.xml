@@ -2,19 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ed760bb-99ba-429c-bc7f-e3e6575e00c2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/function/function.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/HomeModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/icms/cid.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/icms/paid.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/CommentController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/CommentModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/icms/comment_Form.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/route.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/route.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/CategoriesModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/CategoriesModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/Bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/Bootstrap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/function/function.php" beforeDir="false" afterPath="$PROJECT_DIR$/function/function.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/navigation.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/navigation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/section-navigation.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/section-navigation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/icms/paid.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/icms/paid.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,19 +44,19 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="D:/icms" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../myproject" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\baitap\assets" />
-      <recent name="C:\xampp\htdocs\baitap" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\baitap" />
       <recent name="C:\xampp\htdocs\baitap\views\admin\Pages" />
       <recent name="C:\xampp\htdocs\baitap\views\admin\Categories" />
       <recent name="C:\xampp\htdocs\baitap\views" />
       <recent name="C:\xampp\htdocs\baitap\src\core" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\baitap\assets" />
+      <recent name="C:\xampp\htdocs\baitap" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -85,7 +81,8 @@
       <workItem from="1598630018345" duration="612000" />
       <workItem from="1598789265488" duration="2677000" />
       <workItem from="1598836118417" duration="8251000" />
-      <workItem from="1598859328981" duration="3753000" />
+      <workItem from="1598859328981" duration="7651000" />
+      <workItem from="1598920090925" duration="13298000" />
     </task>
     <servers />
   </component>
@@ -114,20 +111,20 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="121" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1598482371885" />
-    <state x="463" y="121" key="FileChooserDialogImpl" timestamp="1598840437282">
+    <state x="463" y="121" key="FileChooserDialogImpl" timestamp="1598942027964">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="121" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1366.768@0.0.1366.728" timestamp="1598840437282" />
+    <state x="463" y="121" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1366.768@0.0.1366.728" timestamp="1598942027964" />
     <state x="463" y="121" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1598630810922" />
-    <state x="543" y="202" key="NewPhpClassDialog" timestamp="1598836784396">
+    <state x="543" y="202" key="NewPhpClassDialog" timestamp="1598931172822">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="543" y="202" key="NewPhpClassDialog/0.0.1366.728/1366.0.1366.768@0.0.1366.728" timestamp="1598836784396" />
+    <state x="543" y="202" key="NewPhpClassDialog/0.0.1366.728/1366.0.1366.768@0.0.1366.728" timestamp="1598931172822" />
     <state x="543" y="202" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1598523204793" />
-    <state x="518" y="294" key="NewPhpFileDialog" timestamp="1598842916926">
+    <state x="518" y="294" key="NewPhpFileDialog" timestamp="1598889215355">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="518" y="294" key="NewPhpFileDialog/0.0.1366.728/1366.0.1366.768@0.0.1366.728" timestamp="1598842916926" />
+    <state x="518" y="294" key="NewPhpFileDialog/0.0.1366.728/1366.0.1366.768@0.0.1366.728" timestamp="1598889215355" />
     <state x="518" y="294" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1598522284759" />
     <state x="0" y="0" key="com.intellij.ide.util.TipDialog" timestamp="1598836118511">
       <screen x="0" y="0" width="1366" height="728" />

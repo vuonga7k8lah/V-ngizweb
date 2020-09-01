@@ -38,3 +38,5 @@ $oRoute->get('edit_user', 'baitap\Controller\UserController@editViewUser');
 $oRoute->get('delete_user', 'baitap\Controller\UserController@deleteUser');
 $oRoute->post('add_user', 'baitap\Controller\UserController@addUser');
 $oRoute->post('edit_user', 'baitap\Controller\UserController@editUser');
+//Comment
+$oRoute->post('comment', 'baitap\Controller\CommentController@commentActon');
