@@ -62,4 +62,5 @@
 <!--        </div>-->
     </fieldset>
     <div><input type="submit" value="Post Comment"/></div>
+<!--    <div class="g-recaptcha" data-sitekey="6LccpcYZAAAAAFDL237UebC_F4YymIXMsl9P7RZV"></div>-->
 </form>

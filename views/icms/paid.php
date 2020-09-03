@@ -12,7 +12,9 @@ $dataPages[] = array(
     'content' => $x['content'],
     'name' => $x['name'],
     'date' => $x['date'],
-    'user_id' => $x['user_id']
+    'user_id' => $x['user_id'],
+    'count'=>$x['count'],
+    'page_id'=>$x['page_id']
 );
 require_once 'views/header.php';
 require_once 'views/navigation.php';
@@ -26,7 +28,7 @@ require_once 'views/section-navigation.php';
                 <h2><?= $row['page_name'] ?></h2>
                 <p><?= $row['content'] ?></p>
                 <p class='meta'>
-                    <strong>Posted by:</strong><a href=''><?= $row['name'] ?></a> |
+                    <strong>Posted by:</strong><a href='<?=\baitap\core\URL::uri('author').'/'.$row['user_id']?>'><?= $row['name'] ?></a> |
                     <strong>On: </strong> <?= $row['date'] ?>
                     <!--                <strong>Page views: </strong> --><? //=$data['content']
                     ?>
