@@ -1,4 +1,4 @@
-<?php $_SESSION['id_page']=$id; if (!empty($message)) echo $message;?>
+<?php $_SESSION['id_page']=$id;?>
 <form id="comment-form" action="<?php echo \baitap\core\URL::uri('comment')?>" method="post">
     <fieldset>
         <legend>Leave a comment</legend>

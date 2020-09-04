@@ -42,3 +42,12 @@ $oRoute->post('edit_user', 'baitap\Controller\UserController@editUser');
 $oRoute->post('comment', 'baitap\Controller\CommentController@commentActon');
 //author
 $oRoute->get('author', 'baitap\Controller\AuthorController@authorView');
+// contact
+$oRoute->get('contact', 'baitap\Controller\ContactController@contactView');
+$oRoute->post('contact', 'baitap\Controller\ContactController@contactAction');
+//Login-Register
+$oRoute->get('register', 'baitap\Controller\RegisterController@registerView');
+$oRoute->get('active', 'baitap\Controller\RegisterController@active');
+$oRoute->post('register', 'baitap\Controller\RegisterController@registerAction');
+$oRoute->get('login', 'baitap\Controller\LoginController@loginView');
+$oRoute->post('login', 'baitap\Controller\LoginController@loginAction');

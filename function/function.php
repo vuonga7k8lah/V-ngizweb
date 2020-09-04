@@ -27,3 +27,14 @@ function captcha() {
     $_SESSION['q'] = $qna[$rand_key];
     return $question = $qna[$rand_key]['question'];
 } // END function captcha
+function clean_email($value) {
+    $suspects = array('to:', 'bcc:','cc:','content-type:','mime-version:', 'multipart-mixed:','content-transfer-encoding:');
+    foreach ($suspects as $s) {
+        if(strpos($value, $s) !== FALSE) {
+            return '';
+        }
+        // Tra ve gia tri cho dau xuong hang
+        $value = str_replace(array('\n', '\r', '%0a', '%0d'), '', $value);
+        return trim($value);
+    }
+}
