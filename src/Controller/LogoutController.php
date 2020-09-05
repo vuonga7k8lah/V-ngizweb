@@ -14,4 +14,9 @@ class LogoutController
         Session::destroyAll();
         Redirect::uri('admin');
     }
+    public function homeLogout()
+    {
+        Session::destroyAll();
+        Redirect::uri('home');
+    }
 }

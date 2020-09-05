@@ -6,5 +6,5 @@
         <li><a href='<?php echo \baitap\core\URL::uri('contact')?>'>Contact us</a></li>
     </ul>
 
-    <p class="greeting">Xin chào bạn hiền!</p>
+    <p class="greeting">Xin chào <?php echo (isset($_SESSION['name'])?$_SESSION['name']:"bạn hiền!");?></p>
 </div><!-- end navigation-->

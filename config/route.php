@@ -20,6 +20,7 @@ $oRoute->post('add_categories', 'baitap\Controller\CategoriesController@addCateg
 $oRoute->post('edit_categories', 'baitap\Controller\CategoriesController@editCategories');
 //logout
 $oRoute->get('logout', 'baitap\Controller\LogoutController@adminLogout');
+$oRoute->get('logout_home', 'baitap\Controller\LogoutController@homeLogout');
 //Sap xep theo thu tu cua table head
 $oRoute->get('order_categories', 'baitap\Controller\CategoriesController@orderCategories');
 $oRoute->get('order_pages', 'baitap\Controller\PageController@orderPages');
@@ -51,3 +52,7 @@ $oRoute->get('active', 'baitap\Controller\RegisterController@active');
 $oRoute->post('register', 'baitap\Controller\RegisterController@registerAction');
 $oRoute->get('login', 'baitap\Controller\LoginController@loginView');
 $oRoute->post('login', 'baitap\Controller\LoginController@loginAction');
+//Forgot Password
+$oRoute->get('forgot', 'baitap\Controller\ForgotPasswordController@forgotView');
+$oRoute->post('forgot', 'baitap\Controller\ForgotPasswordController@forgotPassword');
+$oRoute->post('forgot1', 'baitap\Controller\ForgotPasswordController@NewPassword');

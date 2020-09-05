@@ -2,20 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ed760bb-99ba-429c-bc7f-e3e6575e00c2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Controller/ContactController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/LoginController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/RegisterController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/LoginModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/RegisterModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/icms/contact.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/icms/login.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/icms/register.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/ForgotPasswordController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/ForgotModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/icms/forgotpass.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/icms/forgotpassword.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/route.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/route.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/function/function.php" beforeDir="false" afterPath="$PROJECT_DIR$/function/function.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/CommentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CommentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/LogoutController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/LogoutController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/icms/comment_Form.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/icms/comment_Form.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/icms/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/icms/login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/navigation.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/navigation.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -92,7 +88,8 @@
       <workItem from="1598920090925" duration="13298000" />
       <workItem from="1599035929302" duration="9181000" />
       <workItem from="1599100545441" duration="11079000" />
-      <workItem from="1599180417618" duration="16675000" />
+      <workItem from="1599180417618" duration="16866000" />
+      <workItem from="1599279415081" duration="6089000" />
     </task>
     <servers />
   </component>
@@ -131,15 +128,15 @@
     </state>
     <state x="463" y="121" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1366.768@0.0.1366.728" timestamp="1599107300922" />
     <state x="463" y="121" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1598630810922" />
-    <state x="543" y="202" key="NewPhpClassDialog" timestamp="1599207060187">
+    <state x="543" y="202" key="NewPhpClassDialog" timestamp="1599290116215">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="543" y="202" key="NewPhpClassDialog/0.0.1366.728/1366.0.1366.768@0.0.1366.728" timestamp="1599207060187" />
+    <state x="543" y="202" key="NewPhpClassDialog/0.0.1366.728/1366.0.1366.768@0.0.1366.728" timestamp="1599290116215" />
     <state x="543" y="202" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1598523204793" />
-    <state x="518" y="294" key="NewPhpFileDialog" timestamp="1599190051515">
+    <state x="518" y="294" key="NewPhpFileDialog" timestamp="1599290789463">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="518" y="294" key="NewPhpFileDialog/0.0.1366.728/1366.0.1366.768@0.0.1366.728" timestamp="1599190051515" />
+    <state x="518" y="294" key="NewPhpFileDialog/0.0.1366.728/1366.0.1366.768@0.0.1366.728" timestamp="1599290789463" />
     <state x="518" y="294" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1598522284759" />
     <state x="0" y="0" key="com.intellij.ide.util.TipDialog" timestamp="1599100545425">
       <screen x="0" y="0" width="1366" height="728" />

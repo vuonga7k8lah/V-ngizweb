@@ -19,7 +19,7 @@ require_once 'views/section-navigation.php';
                 <div>
                     <label for="email">Email:
                     </label>
-                    <input type="email" required name="email" id="email" value="" size="20" maxlength="80" tabindex="1" />
+                    <input type="email" required name="email" id="email" value="<?php echo (isset($_SESSION['value_email'])?$_SESSION['value_email']:'');?>" size="20" maxlength="80" tabindex="1" />
                 </div>
                 <div>
                     <label for="pass">Password:
@@ -29,7 +29,7 @@ require_once 'views/section-navigation.php';
             </fieldset>
             <div><input type="submit" value="Login" /></div>
         </form>
-        <p><a href="retrieve_password.php">Forgot password?</a></p>
+        <p><a href="<?=\baitap\core\URL::uri('forgot')?>">Forgot password?</a></p>
     </div><!--end content-->
 
 <?php
