@@ -55,4 +55,5 @@ require_once 'views/section-navigation.php';
         </form>
     </div>
 <?php
+require_once 'views/navigationB.php';
 require_once 'views/footer.php';

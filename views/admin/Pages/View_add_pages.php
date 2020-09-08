@@ -1,5 +1,5 @@
 <?php
-
+isLoginAdmin();
 use baitap\core\URL;
 use baitap\Model\CategoriesModel;
 
@@ -57,7 +57,7 @@ require_once 'views/admin/sidebar-admin.php';
                     <label for="page-content">Page Content: <span class="required">*</span>
                     </label>
                     <textarea name="content" required cols="50"
-                              rows="20"><?php if (isset($_POST['content'])) echo htmlentities($_POST['content'], ENT_COMPAT, 'UTF-8'); ?></textarea>)
+                              rows="20"><?php if (isset($_POST['content'])) echo htmlentities($_POST['content'], ENT_COMPAT, 'UTF-8'); ?></textarea>
                 </div>
             </fieldset>
             <p><input type="submit" value="Add Page"/></p>

@@ -31,10 +31,17 @@ class PagesModel
 
     public static function deletePage($id)
     {
-        return DB::makeConnection()->query("DELETE FROM pages where page_id=".$id."");
+        return DB::makeConnection()->query("DELETE FROM pages where page_id=" . $id . "");
     }
+
     public static function updatePage($data)
     {
-        return DB::makeConnection()->query("UPDATE `pages` SET `cat_id`=".$data['cat_id'].",`page_name`='".$data['page_name']."',`content`='".$data['content']."',`position`=".$data['position'].",`post_on`=null WHERE page_id=".$data['page_id']." ");
+        return DB::makeConnection()->query("UPDATE `pages` SET `cat_id`=" . $data['cat_id'] . ",`page_name`='" . $data['page_name'] . "',`content`='" . $data['content'] . "',`position`=" . $data['position'] . ",`post_on`=null WHERE page_id=" . $data['page_id'] . " ");
+    }
+
+    public static function selectNavB()
+    {
+        $db=DB::makeConnection()->query("SELECT page_id,page_name, content FROM pages ORDER BY post_on asc LIMIT 0, 20");
+        return [$db->num_rows,$db->fetch_all()];
     }
 }

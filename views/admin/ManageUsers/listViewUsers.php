@@ -1,5 +1,5 @@
 <?php
-
+isLoginAdmin();
 use baitap\core\URL;
 use baitap\Model\CategoriesModel;
 
@@ -10,14 +10,15 @@ require_once 'views/admin/sidebar-admin.php';
 ?>
     <div id="content">
         <h2>Manage Users</h2>
+        <div class="success"><?php if (isset($_SESSION['suss_update'])) echo $_SESSION['suss_update'];?></div>
         <table>
             <thead>
             <tr>
                 <th>STT</th>
-                <th><a href="manage_users.php?sort=fn">First Name</a></th>
-                <th><a href="manage_users.php?sort=ln">Last Name</a></th>
-                <th><a href="manage_users.php?sort=e">Email</a></th>
-                <th><a href="manage_users.php?sort=ul">User Level</a></th>
+                <th><a href="">First Name</a></th>
+                <th><a href="">Last Name</a></th>
+                <th><a href="">Email</a></th>
+                <th><a href="">User Level</a></th>
                 <th>Edit User</th>
                 <th>Delete User</th>
             </tr>

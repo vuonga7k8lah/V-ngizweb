@@ -14,7 +14,7 @@
             switch($_SESSION['user_level']) {
                 case 0: // Registered users access
                     echo "
-                    <li><a href=''>User Profile</a></li>
+                    <li><a href='".URL::uri('profile')."'>User Profile</a></li>
                     <li><a href='".URL::uri('forgot')."'>Change Password</a></li>
                     <li><a href=''>Personal Message</a></li>
                     <li><a href='".URL::uri('logout_home')."'>Log Out</a></li>
@@ -23,7 +23,7 @@
 
                 case 2: // Admin access
                     echo "
-                    <li><a href=''>User Profile</a></li>
+                    <li><a href='".URL::uri('profile')."'>User Profile</a></li>
                     <li><a href='".URL::uri('forgot')."'>Change Password</a></li>
                     <li><a href=''>Personal Message</a></li>
                     <li><a href='".URL::uri('admin')."'>Admin CP</a></li>

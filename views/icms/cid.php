@@ -30,4 +30,5 @@ if ($data[0] > 0) {
     </div>
     <?php
 }
+require_once 'views/navigationB.php';
 require_once 'views/footer.php';

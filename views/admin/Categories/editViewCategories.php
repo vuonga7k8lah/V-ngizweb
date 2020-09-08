@@ -1,5 +1,5 @@
 <?php
-
+isLoginAdmin();
 use baitap\core\URL;
 use baitap\core\Request;
 use baitap\Model\CategoriesModel;

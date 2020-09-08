@@ -43,6 +43,7 @@ $oRoute->post('edit_user', 'baitap\Controller\UserController@editUser');
 $oRoute->post('comment', 'baitap\Controller\CommentController@commentActon');
 //author
 $oRoute->get('author', 'baitap\Controller\AuthorController@authorView');
+$oRoute->post('author1', 'baitap\Controller\AuthorController@validateEmail');
 // contact
 $oRoute->get('contact', 'baitap\Controller\ContactController@contactView');
 $oRoute->post('contact', 'baitap\Controller\ContactController@contactAction');
@@ -56,3 +57,7 @@ $oRoute->post('login', 'baitap\Controller\LoginController@loginAction');
 $oRoute->get('forgot', 'baitap\Controller\ForgotPasswordController@forgotView');
 $oRoute->post('forgot', 'baitap\Controller\ForgotPasswordController@forgotPassword');
 $oRoute->post('forgot1', 'baitap\Controller\ForgotPasswordController@NewPassword');
+//edit_profile
+$oRoute->get('profile', 'baitap\Controller\ProfileController@profileView');
+$oRoute->post('profile', 'baitap\Controller\ProfileController@profileEdit');
+$oRoute->post('updateUser', 'baitap\Controller\ProfileController@updateUser');

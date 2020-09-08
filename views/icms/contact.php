@@ -48,4 +48,5 @@ use baitap\core\URL; ?>
         </form>
     </div><!--end content-->
 <?php
+require_once 'views/navigationB.php';
 require_once 'views/footer.php';

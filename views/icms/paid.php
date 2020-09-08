@@ -7,6 +7,7 @@ use baitap\Model\HomeModel;
 $id = Request::uri()[1];
 $x = HomeModel::getPageSingle($id);
 $title = $x['page_name'];
+$x['page_view']=view_counter($x['page_id']);
 $dataPages[] = array(
     'page_name' => $x['page_name'],
     'content' => $x['content'],
@@ -14,7 +15,8 @@ $dataPages[] = array(
     'date' => $x['date'],
     'user_id' => $x['user_id'],
     'count'=>$x['count'],
-    'page_id'=>$x['page_id']
+    'page_id'=>$x['page_id'],
+    'page_view'=>$x['page_view']
 );
 require_once 'views/header.php';
 require_once 'views/navigation.php';
@@ -30,8 +32,7 @@ require_once 'views/section-navigation.php';
                 <p class='meta'>
                     <strong>Posted by:</strong><a href='<?=\baitap\core\URL::uri('author').'/'.$row['user_id']?>'><?= $row['name'] ?></a> |
                     <strong>On: </strong> <?= $row['date'] ?>
-                    <!--                <strong>Page views: </strong> --><? //=$data['content']
-                    ?>
+                    <strong>Page views: </strong> <?= $row['page_view'] ?>
                 </p>
             <?php endforeach; ?>
         </div>
@@ -67,4 +68,5 @@ require_once 'views/section-navigation.php';
         <?php require_once 'views/icms/comment_Form.php'; ?>
     </div>
 <?php
+require_once 'views/navigationB.php';
 require_once 'views/footer.php';

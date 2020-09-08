@@ -1,4 +1,8 @@
 <?php
+
+use baitap\core\Redirect;
+use \baitap\Model\PagesViewModel;
+
 // Cat chu~ de hien thi thanh doan van ngan.
 function the_excerpt($text, $string = 400)
 {
@@ -12,7 +16,9 @@ function the_excerpt($text, $string = 400)
     }
 
 }
-function captcha() {
+
+function captcha()
+{
     $qna = array(
         1 => array('question' => 'Một Cộng Một', 'answer' => 2),
         2 => array('question' => 'Ba Trừ Hai', 'answer' => 1),
@@ -27,10 +33,11 @@ function captcha() {
     $_SESSION['q'] = $qna[$rand_key];
     return $question = $qna[$rand_key]['question'];
 } // END function captcha
-function clean_email($value) {
-    $suspects = array('to:', 'bcc:','cc:','content-type:','mime-version:', 'multipart-mixed:','content-transfer-encoding:');
+function clean_email($value)
+{
+    $suspects = array('to:', 'bcc:', 'cc:', 'content-type:', 'mime-version:', 'multipart-mixed:', 'content-transfer-encoding:');
     foreach ($suspects as $s) {
-        if(strpos($value, $s) !== FALSE) {
+        if (strpos($value, $s) !== FALSE) {
             return '';
         }
         // Tra ve gia tri cho dau xuong hang
@@ -38,3 +45,56 @@ function clean_email($value) {
         return trim($value);
     }
 }
+
+function isAdmin()
+{
+    return isset($_SESSION['user_level']) && ($_SESSION['user_level'] == 2);
+}
+
+function isLogin()
+{
+    if (isset($_SESSION['user_level'])){
+        return true;
+    }
+    else{
+        Redirect::uri('login');
+    }
+}
+
+function isLoginAdmin()
+{
+    if (isAdmin()) {
+        return true;
+    } else Redirect::uri('login');
+}
+
+function view_counter($pg_id)
+{
+    $ip = $_SERVER['REMOTE_ADDR'];
+    if (PagesViewModel::isSelectPagesView($pg_id)[0] > 0) {
+
+        // Neu ket qua tra ve, co nghia la da ton tai trong table, Update page view
+        $num_views = PagesViewModel::isSelectPagesView($pg_id)[1]['num_view'];
+        $db_ip = PagesViewModel::isSelectPagesView($pg_id)[1]['user_ip'];
+
+        // So sanh IP trong CSDL va IP cua nguoi dung, neu khac nhau thi se update CSDL
+        if ($db_ip !== $ip) {
+            PagesViewModel::updatePagesView($pg_id);
+        }
+
+    } else {
+        // Neu ko co ket qua tra ve, thi se insert vao table.
+        PagesViewModel::insertData($pg_id, $ip);
+        $num_views = 1;
+    }
+    return $num_views;
+}// ENd view_counter
+
+// Ham nay de thong bao loi
+function report_error($mgs) {
+    if(isset($mgs)) {
+        foreach ($mgs as $m) {
+            echo $m;
+        }
+    }
+} // END report_error

@@ -5,15 +5,13 @@ $(document).ready(function(){
             $('#available').html('<span class="check">Checking availability...</span>');
             
             $.ajax({
-                type: "get",
-                url: "check.php",
+                type: "post",
+                url: "http://127.0.0.1:8080/baitap/author1",
                 data: "email="+ email, 
                 success: function(response) {
-                    if(response == "YES") {
-                        $('#available').html('<span class="avai">Email is available.</span>');
-                    } else if (response == "NO") {
-                        $('#available').html('<span class="not-avai">Email is NOT available.</span>');
-                    }
+                    var oResponse = JSON.parse(response);
+                    var msgClass = oResponse.isValidEmail === 'yes' ? 'avai' : 'not-avai';
+                    $('#available').html('<span class="'+msgClass+'">'+oResponse.msg+'</span>');
                 }
             });
         } else {

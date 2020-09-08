@@ -33,4 +33,5 @@ require_once 'views/section-navigation.php';
         </div>
     </div><!--end content-->
 <?php
+require_once 'views/navigationB.php';
 require_once 'views/footer.php';
